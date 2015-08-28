@@ -1,0 +1,39 @@
+﻿   
+<div class="jumbotron color-2">
+    <div class="container">
+        <form class="form-horizontal" action="/events" method="post">
+            <fieldset>
+                <h1>Let's go!</h1>
+                <p>Skapa nytt evenemang genom att skriva in ett namn nedan</p>
+                <div class="space">
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="textinput">Mitt evenemang skall heta</label>
+                        <div class="col-md-4">
+                            <input id="eventName" name="eventName" type="text" placeholder="" class="form-control input-md">
+                        </div>
+                        <div class="col-md-4">
+                            <button type="submit" class="btn btn-primary">
+                                <span class="glyphicon glyphicon-ok"></span> Shoot!
+                            </button>
+                        </div>
+                        </div>
+                </div>
+
+            </fieldset>
+        </form>
+
+    </div>
+</div>
+
+<div class="container">
+            
+        <h1>Eller välj ett befintligt evenemang i listan</h1>                    
+                    
+        <%if (registeredEvents) {%>
+            <% registeredEvents.forEach(function(event, index) { %>
+                <li><a href="/events/<%= event.id %>/players"><%= event.name %></a></li>
+            <% });%>
+
+        <%}%>
+</div>

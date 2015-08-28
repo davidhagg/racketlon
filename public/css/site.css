@@ -1,0 +1,86 @@
+﻿body {
+    background-color: #fff;
+}
+
+p.text-small {
+    font-size: 18px;
+}
+
+/* -------------------------------------------------- */
+/* Pages */
+/* -------------------------------------------------- */
+
+.color-1 {
+    background: #fff;
+    color: #606060;
+}
+.color-2 {
+  background: #333;
+  color: #fff;
+}
+.color-3 {
+  background: #3083a7;
+  color: #fff;
+}
+.color-3 h1,
+.color-3 h2,
+.color-3 h3,
+.color-3 h4,
+.color-3 h5,
+.color-3 h6,
+.color-3 .help-block,
+.color-3 {
+  color: #fff;
+}
+.color-3 a {
+  color: #0cc162;
+}
+.color-3 .btn {
+  color: #999;
+}
+
+.color-4 {
+  background: #fff;
+  color: #333;
+}
+.color-4 h1,
+.color-4 h2,
+.color-4 h3,
+.color-4 h4,
+.color-4 h5,
+.color-4 h6 {
+  color: #000000;
+}
+.color-4 a {
+  color: #3083a7;
+}
+.color-4 .btn {
+  color: #ffffff;
+}
+.color-5 {
+  background: #010a0c;
+  color: #ffffff;
+}
+.color-6 {
+    background-color: #c51c9e;
+    color: #fff;
+}
+/* Layout */
+.page {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.space {
+    margin-top: 50px;
+}
+
+label {
+    font-weight: normal;
+    font-size: 20px;
+}
+
+legend {
+    border: 0;
+    font-size: 42px;
+}

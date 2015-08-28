@@ -1,0 +1,37 @@
+﻿<div class="page color-3" id="account">
+    <div class="container">
+        <form class="form-horizontal" action="/login" method="post">
+            <fieldset>
+                <h1>Logga in</h1>
+
+                <% include ../messages %>
+
+                <div class="space">
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="textinput">E-postadress</label>
+                        <div class="col-md-4">
+                            <input id="userName" name="username" type="text" placeholder="Skriv in din e-postadress" class="form-control input-md">
+                            <span class="help-block">Denna adress blir ditt användarnamn</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="textinput">Lösenord</label>
+                        <div class="col-md-4">
+                            <input id="password" name="password" type="password" placeholder="Välj ett lösenord" class="form-control input-md">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-4"></div>
+                        <div class="col-md-4">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="icon-user icon-white"></i> Logga in
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </fieldset>
+        </form>
+
+    </div>
+</div>

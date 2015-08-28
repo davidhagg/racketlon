@@ -1,0 +1,81 @@
+﻿<div class="jumbotron color-2">
+    <div class="container">
+        <h1>Racketlon FTW!</h1>
+        <p>Detta är en enkel poängräknare för ditt racketlon-evenemang. Skapa ett nytt evenemang och lägg till spelare nu för att börja.</p>
+        <p><a href="#account" class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-ok"></span> Skapa konto</a></p>
+        <p class="text-muted text-small">Eller <a href="/login">Logga in</a> om du redan har ett konto</p>
+    </div>
+</div>
+
+<div class="page color-1" id="rules">
+    <div class="container">
+        <div class="inner-page">
+            <h1 class="page-headline">Om Spelet Racketlon</h1>
+        </div>
+
+        <div class="inner-page row">
+            <div class="container">
+                <p>
+                    Racketlon definieras som en sport där tre principer uppfylls
+                </p>
+
+                <ul class="features list-inline">
+                    <li>
+                        <h4><span class="glyphicon glyphicon-check"></span> Spelet måste inkludera de fyra sporterna bordtennis, badminton, squash och tennis</h4>
+                    </li>
+                    <li>
+                        <h4><span class="glyphicon glyphicon-check"></span> Spelet bygger på att samma spelare spelar mot varandra i samtliga grenar med likvärdig poängräkning i varje set</h4>
+                    </li>
+                    <li>
+                        <h4><span class="glyphicon glyphicon-check"></span> Varje boll måste vara värd poäng</h4>
+                    </li>
+                </ul>
+            </div>
+            </div>
+    </div>
+</div>
+
+<div class="page color-3" id="account">
+    <div class="container">
+        <form class="form-horizontal" action="/register" method="post">
+            <fieldset>
+                <h1>Skapa konto</h1>
+
+                <div class="space">
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="textinput">Ditt namn</label>
+                        <div class="col-md-4">
+                            <input id="userName" name="name" type="text" placeholder="" class="form-control input-md">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="textinput">E-postadress</label>
+                        <div class="col-md-4">
+                            <input id="userName" name="username" type="text" placeholder="Skriv in din e-postadress" class="form-control input-md">
+                            <span class="help-block">Denna adress blir ditt användarnamn</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="textinput">Lösenord</label>
+                        <div class="col-md-4">
+                            <input id="password" name="password" type="password" placeholder="Välj ett lösenord" class="form-control input-md">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-md-4"></div>
+                        <div class="col-md-4">
+                            <% include messages %>
+                            <button type="submit" class="btn btn-primary">
+                                <i class="icon-user icon-white"></i> Skapa konto
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </fieldset>
+        </form>
+
+    </div>
+</div>

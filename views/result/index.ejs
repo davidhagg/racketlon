@@ -1,0 +1,87 @@
+﻿<div class="jumbotron color-2">
+    <div class="container">
+        <form class="form-horizontal" action="/result" method="post">
+            <input type="hidden" name="eventId" value="<%= event.id%>" />
+            <fieldset>
+                <div class="space">
+                    <!-- Text input-->
+
+                    <div class="form-group">
+                        <label class="col-md-2 control-label" for="textinput">Sport</label>
+                        <div class="col-md-6">
+                            <select id="sport" name="sport" class="form-control">
+                                <option value="pingis">Pingis</option>
+                                <option value="badminton">Badminton</option>
+                                <option value="squash">Squash</option>
+                                <option value="tennis">Tennis</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-2 control-label" for="textinput">Spelare</label>
+                        <div class="col-md-3">
+                            <%if (players) {%>
+                            <select id="playerOne" name="playerOne" class="form-control">
+                                <% players.forEach(function(player, index) { %>
+                                <option value="<%= player.id%>"><%= player.fullName%></option>
+                                <% }); %>
+                            </select>
+                            <%}%>
+                        </div>
+                        <div class="col-md-3">
+                            <%if (players) {%>
+                            <select id="playerTwo" name="playerTwo" class="form-control">
+                                <% players.forEach(function(player, index) { %>
+                                <option value="<%= player.id%>"><%= player.fullName%></option>
+                                <% }); %>
+                            </select>
+                            <%}%>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-2 control-label" for="textinput">Resultat</label>
+                        <div class="col-md-3">
+                            <select id="playerOneResult" name="playerOneResult" class="form-control">
+                                <% for (var i=0; i <= 21; i++) { %>
+                                <option value="<%= i%>"><%= i%></option>
+                                <% } %>
+                            </select>
+                        </div>
+                        <div class="col-md-3">
+                            <select id="playerTwoResult" name="playerTwoResult" class="form-control">
+                                <% for (var i=0; i <= 21; i++) { %>
+                                <option value="<%= i%>"><%= i%></option>
+                                <% } %>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-md-2">&nbsp;</div>
+                        <div class="col-md-6">
+                            <button type="submit" class="btn btn-primary">
+                                <span class="glyphicon glyphicon-ok"></span> Registrera
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div>
+
+
+<div class="page">
+    <div class="container">
+        <h1>Nuvarande spelare</h1>
+
+        <ul>
+            <%if (players) {%>
+            <% players.forEach(function(player, index) { %>
+                <li><%= player.fullName %></li>
+            <% });%>
+            <%}%>
+        </ul>
+    </div>
+</div>

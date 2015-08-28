@@ -1,0 +1,41 @@
+﻿<div class="jumbotron color-2">
+    <div class="container">
+        
+        <h3><%=event.name%></h3>
+        
+        <form class="form-horizontal" action="/events/<%=event.id%>/players" method="post">
+            <fieldset>
+                <div class="space">
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="textinput">Ny spelare</label>
+                        <div class="col-md-4">
+                            <input id="eventName" name="fullName" type="text" placeholder="" class="form-control input-md">
+                            <input type="hidden" name="eventId" value="<%= event.id%>" />
+                        </div>
+                        <div class="col-md-4">
+                            <button type="submit" class="btn btn-primary">
+                                <span class="glyphicon glyphicon-ok"></span> Registrera
+                            </button>
+                        </div>
+                        </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div>
+
+
+<div class="page">
+    <div class="container">
+        <h1>Registrerade spelare</h1>
+
+        <ul>
+            <%if (players) {%>
+            <% players.forEach(function(player, index) { %>
+                <li><%= player.fullName %></li>
+            <% });%>
+            <%}%>
+        </ul>
+    </div>
+</div>
