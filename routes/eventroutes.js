@@ -8,8 +8,10 @@ var Event = require('../models/event');
 var Player = require('../models/player');
 var Result = require('../models/result');
 var ensureAuth = require('../middleware/ensureauth');
+var menu = require('../middleware/menu');
 
 router.use(ensureAuth);
+router.use(menu);
 
 router.get('/events', function (req, res, next) {
     Event.getEvents(req.user.username, function (err, registeredEvents) {

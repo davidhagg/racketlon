@@ -35,10 +35,10 @@
             <div class="navbar-collapse collapse navbar-responsive-collapse">
                 <%if (locals.user) {%>
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="/events">Evenemang</a></li>
+                    <li <%if (locals.menu === 'events') {%>class="active"<%}%>><a href="/events">Evenemang</a></li>
                     <%if (locals.event) {%>
-                    <li><a href="/events/<%=event.id%>/results">Registrera matchresultat</a></li>
-                    <li><a href="/events/<%=event.id%>/players">Spelare</a></li>
+                    <li <%if (locals.menu === 'results') {%>class="active"<%}%>><a href="/events/<%=event.id%>/results">Registrera matchresultat</a></li>
+                    <li <%if (locals.menu === 'players') {%>class="active"<%}%>><a href="/events/<%=event.id%>/players">Spelare</a></li>
                     <%}%>
                 </ul>
                 <%} else { %>
